@@ -67,7 +67,7 @@ self.addEventListener('fetch', function (event) {
   //End of Caching Data
   if (url.origin === location.origin) {
     return event.respondWith(
-      caches.match(event.request)
+      caches.match(event.request,{'ignoreSearch':true})
         .then(function (response) {
           // Cache hit - return response
           if (response) {
