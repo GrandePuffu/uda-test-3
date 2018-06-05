@@ -4,7 +4,7 @@
 
   window.addEventListener('load', function () {
     if ('serviceWorker' in navigator) {
-      navigator.serviceWorker.register('newservice-min.js',{scope:'/dist/'}).then(function (reg) {
+      navigator.serviceWorker.register('newservice-min.js',{scope:'/'}).then(function (reg) {
         // Registration wa
       }, function (err) {
         // registration failed :(
